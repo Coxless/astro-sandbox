@@ -11,7 +11,7 @@
 | 膨張速度 H(z) を手法ごとに比較 | 宇宙クロノメーター・BAO・超新星で測った H(z) を重ねる | [hz_comparison.ipynb](hz_comparison.ipynb) |
 | ハッブル・テンションの比較 | セファイド・TRGB・CMB など、手法ごとの H₀ を並べる | [hubble_tension.ipynb](hubble_tension.ipynb) |
 | 赤方偏移を自分で測る | SDSS の銀河スペクトルの輝線から z を測る | (予定) |
-| 赤方偏移の種類を比べる | zHEL・zCMB・zHD の違い、固有運動、ドップラーと宇宙論的赤方偏移 | (予定) |
+| 赤方偏移の種類を比べる | zHEL・zCMB・zHD の違い、固有運動、ドップラーと宇宙論的赤方偏移 | [redshift_types.ipynb](redshift_types.ipynb) |
 | 「距離」の定義の違い | 光度距離・角径距離・共動距離・光行距離を比べる | (予定) |
 
 ## ノートブック一覧
@@ -45,6 +45,17 @@
 - テンションを消すのに必要な r_d(約 6% 小さい)と LMC の距離(約 8% 遠い)を計算。cepheid.ipynb の自分の LMC 距離も入れられる
 - 超新星を赤方偏移で分けて H₀ を出し、近くだけ速く膨張しているわけではないことを確認
 - データ: 各論文の H₀(出典はノートブックに記載)、DESI DR2 BAO、Pantheon+
+
+### [赤方偏移の「種類」を比べる](redshift_types.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/cosmology/redshift_types.ipynb)
+
+- Pantheon+ の zHEL と zCMB の差から、太陽系が CMB に対して動く速さ(約 370 km/s)と向きを求める
+- zCMB → zHD の固有運動補正と、近くの超新星では固有運動が距離の誤差になること(z > 0.023 を使う理由)
+- 近くの銀河の速度と距離。アンドロメダ銀河の青方偏移から、タイミング論法で局所銀河群の質量(約 4 × 10¹² 太陽質量)を見積もる
+- 赤方偏移をドップラー効果と見た速度と、空間の膨張と見た遠ざかる速さ(z ≈ 1.5 で光速を超える)を比べる
+- 地球の自転から宇宙膨張まで、赤方偏移を生む効果の大きさを並べる
+- データ: Pantheon+、近くの銀河の値は NED などのおおよその値
 
 ## 式のメモ
 
