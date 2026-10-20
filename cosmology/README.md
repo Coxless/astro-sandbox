@@ -8,7 +8,7 @@
 | テーマ | 概要 | ノートブック |
 | --- | --- | --- |
 | 膨張の歴史を当てはめる | 超新星のハッブル図に Ωm・ΩΛ・w を当てはめ、加速に転じた時期や宇宙年齢を求める | [sn_cosmology_fit.ipynb](sn_cosmology_fit.ipynb) |
-| 膨張速度 H(z) を手法ごとに比較 | 宇宙クロノメーター・BAO・超新星で測った H(z) を重ねる | (予定) |
+| 膨張速度 H(z) を手法ごとに比較 | 宇宙クロノメーター・BAO・超新星で測った H(z) を重ねる | [hz_comparison.ipynb](hz_comparison.ipynb) |
 | ハッブル・テンションの比較 | セファイド・TRGB・CMB など、手法ごとの H₀ を並べる | (予定) |
 | 赤方偏移を自分で測る | SDSS の銀河スペクトルの輝線から z を測る | (予定) |
 | 赤方偏移の種類を比べる | zHEL・zCMB・zHD の違い、固有運動、ドップラーと宇宙論的赤方偏移 | (予定) |
@@ -25,6 +25,16 @@
 - 同じ当てはめとセファイド較正の M_B から H₀(約 73 km/s/Mpc)
 - 減速パラメータ q(z)、加速に転じた赤方偏移(z ≈ 0.6、約 50 億年前)、膨張の速さ da/dt、宇宙年齢
 - データ: Pantheon+ / SH0ES の公開データ(GitHub。ライセンスの明記はなく、論文を引用して利用)
+
+### [宇宙の膨張速度 H(z) を 3 つの方法で測って比べる](hz_comparison.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/cosmology/hz_comparison.ipynb)
+
+- 宇宙クロノメーター(銀河の年齢差)で H(z) を直接測り、系統誤差の共分散も入れて H₀ ≈ 66 ± 6 を求める
+- DESI DR2 の BAO から Ωm ≈ 0.298 と H₀r_d を求め、r_d に CMB の値を使うと H₀ ≈ 69
+- 超新星から、ΛCDM を仮定せずに H(z)/H₀ を折れ線で推定
+- 3 つを重ねると、膨張の歴史の形はそろうが、H₀ の絶対値は物差しによって 67〜69 と 73 に分かれる(ハッブル・テンション)
+- データ: Moresco の宇宙クロノメーター(GitLab)、DESI DR2 BAO(Cobaya の bao_data)、Pantheon+。いずれもライセンスの明記はなく、論文を引用して利用
 
 ## 式のメモ
 
