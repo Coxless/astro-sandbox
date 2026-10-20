@@ -7,7 +7,7 @@
 
 | 方法 | 主な対象 | 概要 | ノートブック |
 | --- | --- | --- | --- |
-| 年周視差 | 近くの恒星 | 視差 p [秒角] から d [pc] = 1 / p | 未作成 |
+| 年周視差 | 近くの恒星 | 視差 p [秒角] から d [pc] = 1 / p | [parallax.ipynb](parallax.ipynb) |
 | 距離指数(標準光源) | 恒星・銀河 | m − M = 5 log₁₀(d / 10 pc) | 未作成 |
 | セファイド変光星 | 近傍銀河 | 周期−光度関係で M を求め、距離指数へ | 未作成 |
 | Ia 型超新星 | 遠方銀河 | 最大光度の標準化で距離指数へ | 未作成 |
@@ -19,11 +19,14 @@
 
 ノートブックを追加したら、ここに Colab バッジ付きで並べます。
 
-<!--
-例:
-- [年周視差](parallax.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/distance/parallax.ipynb)
--->
+### [年周視差](parallax.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/distance/parallax.ipynb)
+
+- 有名な近傍星(プロキシマ・ケンタウリなど)の視差を Gaia DR3 から取得し、`1/p` で距離を計算
+- 視差誤差が大きいと `1/p` が偏る様子をシミュレーションで確認
+- ランダムな Gaia の星で、`1/p` と Bailer-Jones et al. (2021) のベイズ推定距離を比較
+- データ: Gaia DR3、Bailer-Jones et al. (2021) の距離カタログ、SIMBAD(すべてオープン)
 
 ## 単位メモ
 
