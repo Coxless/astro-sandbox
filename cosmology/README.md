@@ -12,7 +12,7 @@
 | ハッブル・テンションの比較 | セファイド・TRGB・CMB など、手法ごとの H₀ を並べる | [hubble_tension.ipynb](hubble_tension.ipynb) |
 | 赤方偏移を自分で測る | SDSS の銀河スペクトルの輝線から z を測る | (予定) |
 | 赤方偏移の種類を比べる | zHEL・zCMB・zHD の違い、固有運動、ドップラーと宇宙論的赤方偏移 | [redshift_types.ipynb](redshift_types.ipynb) |
-| 「距離」の定義の違い | 光度距離・角径距離・共動距離・光行距離を比べる | (予定) |
+| 「距離」の定義の違い | 光度距離・角径距離・共動距離・光行距離を比べる | [cosmic_distances.ipynb](cosmic_distances.ipynb) |
 
 ## ノートブック一覧
 
@@ -56,6 +56,16 @@
 - 赤方偏移をドップラー効果と見た速度と、空間の膨張と見た遠ざかる速さ(z ≈ 1.5 で光速を超える)を比べる
 - 地球の自転から宇宙膨張まで、赤方偏移を生む効果の大きさを並べる
 - データ: Pantheon+、近くの銀河の値は NED などのおおよその値
+
+### [宇宙論の「距離」はいくつもある](cosmic_distances.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/cosmology/cosmic_distances.ipynb)
+
+- 光度距離・共動距離・角径距離・光行距離を z の関数として比べる(z ≈ 0.01 で 1%、z > 1 では何倍も違う)
+- 角径距離は z ≈ 1.6 で最大になり、それより遠い天体は大きく見えてくる。CMB の音響ピークの角度 0.596° を再現
+- 「135 億年前の光」の銀河(JADES-GS-z14-0)が今どこにいるか、観測できる宇宙の半径(約 460 億光年)
+- 距離双対性 d_L = (1+z)² D_A を、Pantheon+ の超新星と DESI の BAO で確かめる
+- データ: astropy の Planck18、Pantheon+、DESI DR2 BAO
 
 ## 式のメモ
 
