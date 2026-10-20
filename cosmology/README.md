@@ -10,7 +10,7 @@
 | 膨張の歴史を当てはめる | 超新星のハッブル図に Ωm・ΩΛ・w を当てはめ、加速に転じた時期や宇宙年齢を求める | [sn_cosmology_fit.ipynb](sn_cosmology_fit.ipynb) |
 | 膨張速度 H(z) を手法ごとに比較 | 宇宙クロノメーター・BAO・超新星で測った H(z) を重ねる | [hz_comparison.ipynb](hz_comparison.ipynb) |
 | ハッブル・テンションの比較 | セファイド・TRGB・CMB など、手法ごとの H₀ を並べる | [hubble_tension.ipynb](hubble_tension.ipynb) |
-| 赤方偏移を自分で測る | SDSS の銀河スペクトルの輝線から z を測る | (予定) |
+| 赤方偏移を自分で測る | SDSS の銀河スペクトルの輝線から z を測る | [measure_redshift.ipynb](measure_redshift.ipynb) |
 | 赤方偏移の種類を比べる | zHEL・zCMB・zHD の違い、固有運動、ドップラーと宇宙論的赤方偏移 | [redshift_types.ipynb](redshift_types.ipynb) |
 | 「距離」の定義の違い | 光度距離・角径距離・共動距離・光行距離を比べる | [cosmic_distances.ipynb](cosmic_distances.ipynb) |
 
@@ -45,6 +45,16 @@
 - テンションを消すのに必要な r_d(約 6% 小さい)と LMC の距離(約 8% 遠い)を計算。cepheid.ipynb の自分の LMC 距離も入れられる
 - 超新星を赤方偏移で分けて H₀ を出し、近くだけ速く膨張しているわけではないことを確認
 - データ: 各論文の H₀(出典はノートブックに記載)、DESI DR2 BAO、Pantheon+
+
+### [銀河のスペクトルから赤方偏移を自分で測る](measure_redshift.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/coxless/astro-sandbox/blob/main/cosmology/measure_redshift.ipynb)
+
+- SDSS DR17 から、z = 0.01〜0.6 の銀河のスペクトルを取ってくる
+- 輝線・吸収線のリストを z だけ伸ばした型紙との相互相関で、おおよその z を探す
+- 1 本ずつガウス関数を当てはめて z を精密に決め、どの線も同じ倍率 1+z で伸びていることを確かめる
+- SDSS のパイプラインの z と比べる(輝線銀河で数十 km/s 以内、吸収線だけの銀河で 100 km/s 程度)
+- データ: SDSS DR17(自由に利用可。SDSS への謝辞と論文を引用)
 
 ### [赤方偏移の「種類」を比べる](redshift_types.ipynb)
 
